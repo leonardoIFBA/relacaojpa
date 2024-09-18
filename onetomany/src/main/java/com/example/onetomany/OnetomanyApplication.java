@@ -50,9 +50,8 @@ public class OnetomanyApplication {
 			
 			Proprietario p1 = proRep.findById(2L).get();
 			System.out.println("Pesquisando veículo através de proprietario");
-			System.out.println("Proprietário: " + p1.getNome() + " veículo(s): ");
 			for (Veiculo v : p1.getVeiculos()) {
-				System.out.println(v.getModelo());
+				System.out.println("Proprietário: " + p1.getNome() + " veículo(s): " + v.getModelo());
 			} 			
 			
 

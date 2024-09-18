@@ -44,9 +44,16 @@ public class OnetomanyApplication {
 
 			veiRep.save(veiculo2);
 
-			//System.out.println(veiRep.findAll()); 
+			Veiculo v1 = veiRep.findById(4L).get(); 
+			System.out.println("Pesquisando proprietario através de veiculo");
+			System.out.println("Veículo: " + v1.getModelo() + " Proprietario: " + v1.getProprietario().getNome());				
+			
 			Proprietario p1 = proRep.findById(2L).get();
-			System.out.println("Proprietário: " + p1.getNome() + " veículo: " + p1.getVeiculos());				
+			System.out.println("Pesquisando veículo através de proprietario");
+			System.out.println("Proprietário: " + p1.getNome() + " veículo(s): ");
+			for (Veiculo v : p1.getVeiculos()) {
+				System.out.println(v.getModelo());
+			} 			
 			
 
 		};

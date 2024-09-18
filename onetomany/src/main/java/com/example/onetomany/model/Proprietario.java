@@ -20,9 +20,9 @@ public class Proprietario {
     //@JoinColumn(name = "id_proprietario_fk")
     //private List<Veiculo> veiculos;
 
-    //pra fica bidirecional
+    //pra ficar bidirecional
     
-    @OneToMany(mappedBy = "proprietario" , fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "proprietario")
     private List<Veiculo> veiculos;
 
     @Override
